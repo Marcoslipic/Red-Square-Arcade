@@ -1,0 +1,111 @@
+#play_button{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 8rem;
+    transition: 1.5s 
+}
+
+#play_button:hover{
+    background: purple; 
+    transform: translateY(-25px);
+}
+
+#sliding_play_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    margin-top: 20rem;
+    transition: 1.5s; 
+}
+
+#sliding_play_button:hover{
+    background: purple;
+    transform: translateX(50px) 
+}
+
+body{
+    background: turquoise; 
+}
+
+.jumping_red_square{
+    /* grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    margin-left: 12rem;  */
+
+    position: absolute;
+    left: 550px;
+    top: 550px; 
+    max-width: 100px;
+    max-height: 100px; 
+
+    animation-name: jump;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jump{
+    from{ transform: translateY(-150px)}
+    to{ transform: translateY(-500px)}
+    /* to { transform: translateY(0px)} */
+}
+
+.sliding_red_square{
+    max-width: 100px;
+    max-height: 100px;
+
+    animation-name: slide;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide{
+    from{ transfrom: translateX(0px)}
+    to{ transform: translateX(1100px)}
+}
+
+#spinning_red_square{
+    position: absolute;
+    top: 0;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 1rem; 
+
+}
+
+#spinning_red_square:hover{
+    animation-name: spin;
+    animation-duration: 10s;
+}
+
+@keyframes spin{
+    from{transform: rotate(0px)}
+    to{transform: rotate(720deg)}
+}
+
+#growing_red_square{
+    position: absolute;
+    top: 0;
+    right: 0; 
+    width: 100px;
+    height: 100px; 
+    margin: 1rem; 
+}
+
+#growing_red_square:hover{
+    transition: all .2s ease; 
+    transform: scale(2);
+}
+
+h1{
+    display: flex; 
+    justify-content: center;
+}

@@ -1,0 +1,60 @@
+.red_square{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.panels{
+    list-style-type: none;
+    padding: 0; 
+}
+
+.panels li{
+    position: relative;
+    width: 25%; 
+    margin: 0;
+    display: block; 
+    box-sizing: border-box;
+    float: left; 
+}
+
+.panels li div{
+    width: 100%;
+    padding: 50% 0; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.panels div.back{
+    transform: rotateY(90deg);
+}
+
+.panels div.front{
+    position: absolute;
+}
+
+.panels li:hover div.front{
+    animation: twirl 0.2s ease-in forwards; 
+}
+
+.panels li:hover div.back{
+    animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+
+@keyframes twirl{
+    from{ transform: rotateY(0deg) }
+    to{ transform: rotateY(90deg)}
+}
+
+#firstcard{
+    animation: twirl; 
+}
